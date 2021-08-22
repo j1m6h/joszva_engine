@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/src/main.cpp.o -c /home/joshua/Desktop/joszva_engine/src/main.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/src/main.cpp"
+},
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/src/renderer/vulkan/vk_descriptor_pool.cpp.o -c /home/joshua/Desktop/joszva_engine/src/renderer/vulkan/vk_descriptor_pool.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/src/renderer/vulkan/vk_descriptor_pool.cpp"
+},
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/src/renderer/vulkan/vk_device.cpp.o -c /home/joshua/Desktop/joszva_engine/src/renderer/vulkan/vk_device.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/src/renderer/vulkan/vk_device.cpp"
+},
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/src/renderer/vulkan/vk_instance.cpp.o -c /home/joshua/Desktop/joszva_engine/src/renderer/vulkan/vk_instance.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/src/renderer/vulkan/vk_instance.cpp"
+},
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/vendor/imgui/imgui.cpp.o -c /home/joshua/Desktop/joszva_engine/vendor/imgui/imgui.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/vendor/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/vendor/imgui/imgui_draw.cpp.o -c /home/joshua/Desktop/joszva_engine/vendor/imgui/imgui_draw.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/vendor/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/vendor/imgui/imgui_tables.cpp.o -c /home/joshua/Desktop/joszva_engine/vendor/imgui/imgui_tables.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/vendor/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/vendor/imgui/imgui_widgets.cpp.o -c /home/joshua/Desktop/joszva_engine/vendor/imgui/imgui_widgets.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/vendor/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/joshua/Desktop/joszva_engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/joszva_engine.dir/vendor/imgui/backends/imgui_impl_vulkan.cpp.o -c /home/joshua/Desktop/joszva_engine/vendor/imgui/backends/imgui_impl_vulkan.cpp",
+  "file": "/home/joshua/Desktop/joszva_engine/vendor/imgui/backends/imgui_impl_vulkan.cpp"
+}
+]

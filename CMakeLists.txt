@@ -2,7 +2,22 @@ cmake_minimum_required(VERSION 3.5)
 
 project(joszva_engine)
 
-add_executable(${PROJECT_NAME}
-    src/main.cpp)
+set(imgui_sources 
+    vendor/imgui/imgui.cpp
+    vendor/imgui/imgui_draw.cpp
+    vendor/imgui/imgui_tables.cpp 
+    vendor/imgui/imgui_widgets.cpp
+    vendor/imgui/backends/imgui_impl_vulkan.cpp)
 
-target_link_libraries(${PROJECT_NAME} "/home/joshua/Desktop/joszva_engine/vendor/graphics/lib/libjoszva_graphics.so")
+add_executable(${PROJECT_NAME}
+    src/main.cpp
+    src/renderer/vulkan/vk_descriptor_pool.cpp 
+    src/renderer/vulkan/vk_device.cpp
+    src/renderer/vulkan/vk_instance.cpp
+    ${imgui_sources})
+
+find_package(Vulkan)
+target_link_libraries(${PROJECT_NAME} Vulkan::Vulkan)
+
+target_link_libraries(${PROJECT_NAME} "/home/joshua/Desktop/joszva_engine/vendor/joszva_graphics/lib/libjoszva_graphics.so")
+target_link_libraries(${PROJECT_NAME} "/home/joshua/Desktop/joszva_engine/vendor/joszva_log/lib/libjoszva_log.so")

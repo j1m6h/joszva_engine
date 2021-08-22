@@ -12,11 +12,12 @@ namespace joszva::engine
         vk_instance(const char** extensions, uint32_t extension_count);
         ~vk_instance();
 
+        const VkInstance get_instance() const;
+
     private:
         void create_instance(const char** extensions, uint32_t extension_count);
-        void cleanup();
 
-        VkInstance _vk_instance;
+        VkInstance instance;
     };
 }
 #endif

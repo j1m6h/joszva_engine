@@ -1,15 +1,28 @@
-#include "renderer/vulkan/vk_instance.h"
+#include "../../../inc/renderer/vulkan/vk_instance.h"
+
+#include "../../../vendor/joszva_log/inc/logger.h"
 
 using joszva::engine::vk_instance;
 
+namespace 
+{
+    auto _logger = std::make_shared<joszva::logger>();
+}
+
 vk_instance::vk_instance(const char** extensions, uint32_t extension_count)
+    : instance(VK_NULL_HANDLE)
 {
     create_instance(extensions, extension_count);
 }
 
 vk_instance::~vk_instance()
 {
-    cleanup();
+    vkDestroyInstance(instance, nullptr);
+}
+
+const VkInstance vk_instance::get_instance() const 
+{
+    return instance;
 }
 
 void vk_instance::create_instance(const char** extensions, uint32_t extension_count)
@@ -31,16 +44,11 @@ void vk_instance::create_instance(const char** extensions, uint32_t extension_co
     create_info.ppEnabledExtensionNames = extensions;
     create_info.enabledLayerCount = 0;
 
-    if (vkCreateInstance(&create_info, nullptr, &_vk_instance) != VK_SUCCESS)
+    if (vkCreateInstance(&create_info, nullptr, &instance) != VK_SUCCESS)
     {
-        /* failed to create instance */
+        _logger->error("Failed to create vulkan instance");
         return;       
     }
 
-    /* successfully created instance */
-}
-
-void vk_instance::cleanup()
-{
-    vkDestroyInstance(_vk_instance, nullptr);
+    _logger->info("Successfully created vulkan instance");
 }

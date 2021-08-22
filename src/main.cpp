@@ -1,8 +1,8 @@
 #include <chrono>
-#include <iostream>
 #include <thread>
 
-#include "../vendor/graphics/inc/engine.h"
+#include "../vendor/joszva_graphics/inc/engine.h"
+#include "../vendor/joszva_log/inc/logger.h"
 
 int main()
 {
@@ -12,12 +12,6 @@ int main()
     /* handle the on close window event */
     win.on<close_event>([&win](const auto& event){
         win.destroy();
-    });
-
-    win.on<key_pressed_event>([](const auto& event){
-        keyboard::key k = event.key;
-        int k2 = reinterpret_cast<int>(k);
-        std::cout << std::to_string(k2) << std::endl;
     });
 
     while (win.is_open())
