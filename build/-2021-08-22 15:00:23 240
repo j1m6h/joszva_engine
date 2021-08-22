@@ -1,6 +1,0 @@
-2021-08-22 15:00:23 240 [INFO] Window created successfully
-2021-08-22 15:00:23 270 [INFO] Successfully created vulkan instance
-2021-08-22 15:00:23 308 [INFO] Successfully created logical device
-2021-08-22 15:00:23 308 [INFO] Set window visible
-2021-08-22 15:00:23 308 [INFO] Event processing started...
-2021-08-22 15:00:30 953 [INFO] Destroyed window
