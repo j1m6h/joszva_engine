@@ -7,9 +7,11 @@ set(imgui_sources
     vendor/imgui/imgui_draw.cpp
     vendor/imgui/imgui_tables.cpp 
     vendor/imgui/imgui_widgets.cpp
+    vendor/imgui/backends/imgui_impl_joszva.cpp
     vendor/imgui/backends/imgui_impl_vulkan.cpp)
 
 add_executable(${PROJECT_NAME}
+    src/application.cpp
     src/main.cpp
     src/renderer/vulkan/vk_descriptor_pool.cpp 
     src/renderer/vulkan/vk_device.cpp

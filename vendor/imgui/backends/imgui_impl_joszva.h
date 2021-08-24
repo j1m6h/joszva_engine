@@ -7,7 +7,7 @@
 using joszva::graphics::window;
 
 IMGUI_IMPL_API bool imgui_impl_joszva_init_for_vulkan(const window& win, bool install_callbacks);
-IMGUI_IMPL_API void imgui_impl_joszva_new_frame();
+IMGUI_IMPL_API void imgui_impl_joszva_new_frame(const window& win);
 IMGUI_IMPL_API void imgui_impl_joszva_shutdown();
 
 #endif

@@ -9,10 +9,9 @@ namespace
     auto _logger = std::make_shared<joszva::logger>();
 }
 
-vk_instance::vk_instance(const char** extensions, uint32_t extension_count)
+vk_instance::vk_instance()
     : instance(VK_NULL_HANDLE)
 {
-    create_instance(extensions, extension_count);
 }
 
 vk_instance::~vk_instance()
@@ -23,6 +22,11 @@ vk_instance::~vk_instance()
 const VkInstance vk_instance::get_instance() const 
 {
     return instance;
+}
+
+void vk_instance::init(const char** extensions, uint32_t extension_count)
+{
+    create_instance(extensions, extension_count);
 }
 
 void vk_instance::create_instance(const char** extensions, uint32_t extension_count)

@@ -1,3 +1,0 @@
-/home/joshua/Desktop/joszva_engine/build/CMakeFiles/rebuild_cache.dir
-/home/joshua/Desktop/joszva_engine/build/CMakeFiles/edit_cache.dir
-/home/joshua/Desktop/joszva_engine/build/CMakeFiles/joszva_engine.dir

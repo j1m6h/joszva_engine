@@ -1,6 +1,8 @@
 #ifndef MOUSE_H
 #define MOUSE_H
 
+#include "../math/vector2.h"
+
 namespace joszva::graphics
 {
     namespace mouse
@@ -15,6 +17,7 @@ namespace joszva::graphics
         };
 
         bool is_mouse_pressed(mouse::button btn);
+        const vector2<int> get_cursor_coords();
     }
 }
 #endif

@@ -11,15 +11,12 @@ namespace
     auto _logger = std::make_shared<joszva::logger>();
 }
 
-vk_device::vk_device(const vk_instance& instance)
+vk_device::vk_device()
     : physical_device(VK_NULL_HANDLE),
     device(VK_NULL_HANDLE),
     queue(VK_NULL_HANDLE),
     queue_family(static_cast<uint32_t>(-1))
 {
-    pick_physical_device(instance);
-    select_graphics_queue_family();
-    create_logical_device();
 }
 
 vk_device::~vk_device()
@@ -27,9 +24,31 @@ vk_device::~vk_device()
     vkDestroyDevice(device, nullptr);
 }
 
+const VkPhysicalDevice vk_device::get_physical_device() const
+{
+    return physical_device;
+}
+
 const VkDevice vk_device::get_device() const 
 {
     return device;
+}
+
+const VkQueue vk_device::get_queue() const
+{
+    return queue;
+}
+
+const uint32_t vk_device::get_queue_family() const 
+{
+    return queue_family;
+}
+
+void vk_device::init(const vk_instance& instance)
+{
+    pick_physical_device(instance);
+    select_graphics_queue_family();
+    create_logical_device();
 }
 
 void vk_device::pick_physical_device(const vk_instance& instance)

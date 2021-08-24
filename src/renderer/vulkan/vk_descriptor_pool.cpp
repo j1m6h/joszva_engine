@@ -9,16 +9,26 @@ namespace
     auto _logger = std::make_shared<joszva::logger>();
 }
 
-vk_descriptor_pool::vk_descriptor_pool(const vk_device& device)
+vk_descriptor_pool::vk_descriptor_pool()
     : descriptor_pool(VK_NULL_HANDLE),
-    device(device.get_device())
+    device(VK_NULL_HANDLE)
 {
-    create_descriptor_pool();
 }
 
 vk_descriptor_pool::~vk_descriptor_pool()
 {
     vkDestroyDescriptorPool(device, descriptor_pool, nullptr);
+}
+
+const VkDescriptorPool vk_descriptor_pool::get_descriptor_pool() const 
+{
+    return descriptor_pool;
+}
+
+void vk_descriptor_pool::init(const vk_device& device)
+{
+    this->device = device.get_device();
+    create_descriptor_pool();
 }
 
 void vk_descriptor_pool::create_descriptor_pool()

@@ -1,8 +1,0 @@
-2021-08-22 15:47:19 737 [INFO] Window created successfully
-2021-08-22 15:47:19 767 [INFO] Successfully created vulkan instance
-2021-08-22 15:47:19 767 [INFO] Selected device : [NVIDIA GeForce GTX 1660]
-2021-08-22 15:47:19 797 [INFO] Successfully created logical device
-2021-08-22 15:47:19 813 [INFO] Successfully created descriptor pool
-2021-08-22 15:47:19 814 [INFO] Set window visible
-2021-08-22 15:47:19 814 [INFO] Event processing started...
-2021-08-22 15:47:22 211 [INFO] Destroyed window
