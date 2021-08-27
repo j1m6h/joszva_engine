@@ -29,7 +29,7 @@ namespace joszva::graphics
         void set_cursor_coords(const vector2<int>& coord) const;
         void destroy();
 
-        const char** get_required_instance_extensions(uint32_t* count);
+        static const char** get_required_instance_extensions(uint32_t* count);
         VkResult create_vulkan_surface(const VkInstance& instance, const VkAllocationCallbacks* allocator, VkSurfaceKHR& surface);
 
         bool is_open();

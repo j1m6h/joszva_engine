@@ -2,9 +2,9 @@
 
 #include "../inc/application.h"
 
-int main()
+int main(int argc, char* argv[])
 {
-    joszva::engine::application app;
+    joszva::engine::application app(argc, argv);
     try
     {
         app.run();
