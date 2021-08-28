@@ -6,6 +6,7 @@
 
 namespace joszva::engine
 {
+    /* a wrapper for our physical device, logical device, and device queues */
     class vk_device
     {
     private:
@@ -33,6 +34,7 @@ namespace joszva::engine
 
         VkPhysicalDevice physical_device;
         VkDevice device;
+        
         VkQueue graphics_queue;
         VkQueue present_queue;
         queue_family_indicies queue_indicies;

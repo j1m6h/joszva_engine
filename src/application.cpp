@@ -138,6 +138,8 @@ void application::run()
         {
             draw_ui();
             render_frame();
+
+            //_camera->update(time_passed);
         }
     }
 

@@ -24,6 +24,8 @@ namespace joszva::engine
         void create_sync_objects();
         virtual void record_ui_commands(uint32_t buffer_index);
 
+        void process_mouse_input();
+
         graphics::window win;
         bool is_closing;
     };

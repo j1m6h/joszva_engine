@@ -11,15 +11,14 @@ set(imgui_sources
     vendor/imgui/backends/imgui_impl_vulkan.cpp)
 
 set(renderer_sources
+    src/renderer/camera.cpp
     src/renderer/renderer.cpp
     src/renderer/vulkan/vk_command_buffers.cpp 
     src/renderer/vulkan/vk_command_pool.cpp 
     src/renderer/vulkan/vk_descriptor_pool.cpp 
     src/renderer/vulkan/vk_device.cpp 
-    src/renderer/vulkan/vk_fence.cpp
     src/renderer/vulkan/vk_instance.cpp 
     src/renderer/vulkan/vk_pipeline.cpp 
-    src/renderer/vulkan/vk_semaphore.cpp
     src/renderer/vulkan/vk_swapchain.cpp
     src/renderer/vulkan/vk_window_surface.cpp)
 
